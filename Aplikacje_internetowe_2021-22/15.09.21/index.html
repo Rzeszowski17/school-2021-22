@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <title>15.09.21-22.09.21</title>
+</head>
+<body>
+    <h5>Zadanie 1 i 2</h5>
+
+    <p id="aka">To jest teks w akapicie! </p>
+    <h5>Zadanie 3</h5>
+    
+    <input type="number" id="px">
+    <input type="button" id="przy1" value="Wyslij">
+
+    <h5>Zadanie 4</h5>
+    <input type="text" id="tex" placeholder="Wpisać tekst">
+    <input type="button" id="przy2" value="Wyslij">
+    <br>
+    <br>
+    <div id="blok1"></div>
+    <input type="radio" id="color">Green
+
+    <h5>Zadanie 5</h5>
+    <input type="number" id="x" placeholder="Podaj liczbe x">
+    <input type="number" id="y" placeholder="Podaj liczbe y">
+    <input type="button" id="wynik" value="wyślij">
+    <div id="blok2"></div>
+
+    <h5>Zadanie 6</h5>
+    <div id="date"></div>
+
+    <h5>Zadanie 7</h5>
+    <div id="time"></div>
+
+    <h5>Zadanie 8</h5>
+    <input type="text" id="sor" placeholder="Podaj wpis">
+    <input type="button" id="butt4" value="Wprowadź tekst">
+    <div id="sort"></div>
+    
+</body>
+<script>
+
+    //Zadanie 1
+    var akapit=document.getElementById("aka");
+
+    akapit.innerHTML+="Kacper Rzeszowski"
+
+    //Zadanie 2
+
+    akapit.onmouseover = function(){
+        akapit.style.color="red";
+        akapit.style.fontFamily="Arial";
+    }
+
+    akapit.onmouseout = function(){
+        akapit.style.color="black";
+    }
+
+    //Zadanie 3
+    var siz=document.getElementById("px")
+    var butt1=document.getElementById("przy1");
+
+    butt1.onclick = function(){
+        akapit.style.fontSize=siz.value+"px";
+    }
+
+    //Zadanie 4
+
+    var tex=document.getElementById("tex");
+    var b1=document.getElementById("blok1");
+    var butt2=document.getElementById("przy2");
+    var c=document.getElementById("color");
+
+    butt2.onclick=function(){
+        b1.innerHTML="Wpisałeś tekst: "+tex.value;
+    }
+
+    c.onclick=function(){
+        b1.style.background="green"
+    }
+
+    //Zadanie 5
+     
+    
+    var butt3=document.getElementById("wynik");
+    var b2=document.getElementById("blok2");
+
+    butt3.onclick = function(){
+
+    var x=parseInt(document.getElementById("x").value);
+    var y=parseInt(document.getElementById("y").value);
+
+
+    if(x<y){
+        b2.innerHTML+="Ciag jest rosnący: "
+        for(var i=x; i<=y; i++){
+            if(i%2==0){
+                b2.innerHTML+="<span style='color:red;'>"+i+'</span>'+", ";
+            }
+            else{
+                b2.innerHTML+="<span style='color:blue;'>"+i+'</span>'+", ";
+            }
+        }
+       
+    }else if(x>y){
+        b2.innerHTML+="Ciag jest malejący: "
+        for(var i=x; i>=y; i--){
+            if(i%2==0){
+                b2.innerHTML+="<span style='color:red;'>"+i+'</span>'+", ";
+            }
+            else{
+                b2.innerHTML+="<span style='color:blue;'>"+i+'</span>'+", ";
+            }
+        }
+        
+
+    }
+}
+
+    //Zadanie 6
+
+    var date = new Date ();
+    var da=document.getElementById("date");
+    var Day=date.getDate();
+    var Mon=date.getMonth()+1;
+    var Yea=date.getFullYear();
+
+    da.innerHTML="Dzisiaj jest: "+Day+"."+Mon+"."+Yea;
+    
+    //Zadanie 7
+    
+    var ti=document.getElementById("time");
+
+    function zegar(){
+    var date = new Date ();
+    var Hou=date.getHours();
+    var Min=date.getMinutes();
+    var Sec=date.getSeconds();
+
+    ti.innerHTML="Teraz jest:"+Hou+":"+Min+":"+Sec;
+    }
+    setInterval("zegar()", 1000);
+
+    //Zadanie 8
+    var so1=document.getElementById("sor");
+    var so2=document.getElementById("sort");
+    var butt4=document.getElementById("butt4");
+    var tab=[];
+
+    butt4.onclick=function(){
+
+if(so1.value==""||so1.value==null){
+}
+else{
+tab.push(so1.value);
+
+so1.value="";
+so1.focus();
+
+for(var i=0; i<tab.length; i++){
+tab[i]=tab[i];
+}
+
+
+tab.sort();
+so2.innerHTML=tab.join(", ");
+
+
+}  
+
+}
+
+    
+</script>
+</html>
