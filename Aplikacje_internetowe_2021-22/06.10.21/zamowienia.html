@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl10.css">
+    <title>Fabryka cukierków</title>
+</head>
+<body>
+    <div id="up1">
+        <a href="zamowienia.html" id="hre1">Zamów Cukierki</a>
+    </div>
+    <div id="up2">
+        <a href="index.html" id="hre2"><img src="Pliki/logotyp.png"></a>
+    </div>
+    <div id="baner"> 
+        <h1>Słodka kraina</h1>
+    </div>
+    <div id=left>
+        Numer kształtu:
+        <input type="number" id="num">
+        <br>
+        Skomponuj swój kolor, podaj RGB
+        <br>
+        R: <input type="number" id="R">
+        G: <input type="number" id="G">
+        B: <input type="number" id="B">
+        <br>
+        <input type="button" id="butt" value="Zamówienie">
+        <p id="scor">Twoje zamówienie </p>
+        <input type="button" id="colo" value="Kolor">
+    </div>
+    <div id=right>
+        <h2>Nasza oferta</h2>
+        <table>
+        <tr>
+        <td>Kształty</td>
+        <td rowspan="2" >Możesz zamówić dowolny kolor cukierka</td>
+        </tr>
+        <tr>
+            <td>
+            <ol>
+                <li>cytryna</li>
+                <li>liść</li>
+                <li>banan</li>
+            </ol>
+            </td>
+        </tr>
+        </table>
+    </div>
+    <footer>
+        Autor strony: Kacper Rzeszowski
+    </footer>
+    <script>
+        var but=document.getElementById("butt");
+
+        but.onclick=function(){
+
+        var num=document.getElementById("num");
+        var x=parseInt(num.value)
+        var wyn=document.getElementById("scor");
+
+        if(x==1){
+            wyn.innerHTML+="to cukierek cytryna";
+        }
+        else if(x==2){
+            wyn.innerHTML+="to cukierek liść";
+        }
+        else if(x==3){
+            wyn.innerHTML+="to cukierek banan";
+        }
+        else{
+            wyn.innerHTML+="to cukierek inny";
+        }
+
+        var r=document.getElementById("R");
+        var r=parseInt(r.value);
+        var g=document.getElementById("G");
+        var g=parseInt(g.value);
+        var b=document.getElementById("B");
+        var b=parseInt(b.value);
+
+        var col=document.getElementById("colo");
+
+        col.style.backgroundColor='rgb('+r+','+g+','+b+')';
+
+        }
+    </script>
+</body>
+</html>
