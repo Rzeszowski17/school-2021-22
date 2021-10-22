@@ -27,17 +27,31 @@ SELECT `imie`,`nazwisko` FROM `studenci`
 left join `meldunek`
 ON`studenci`.`pesel`=`meldunek`.`pesel`
 where `meldunek`.`pesel` is null
-ORDER BY `nazwisko`asc;
+ORDER BY `nazwisko`asc
 
 Zad 2.1
-SELECT count(round(right(`pesel`,2)/10,0)%2=0) as `liczba kobiet`,count(round(right(`pesel`,2)/10,0)%2=1) as `liczba mezczyzn`
-FROM `studenci`;
+SELECT case when right($pes,2)%2=0 THEN 'Kobieta' else 'Mężczyzna' end as `plec`
+from `studenci`
+GROUP by `plec`
+
 Zad 2.2
+SELECT COUNT(`studenci`.`imie`) as `liczba`,
+if(`studenci`.`imie` like '%a', 'Kobiet', 'Mężczyzn') as `plec`
+from `studenci`
+GROUP by `plec`
 
 Zad 3.1
-SELECT `tytul`,count(`wypozyczenia`.`lp`)as`liczba ksiazek` 
+SELECT `tytul`,count(`wypozyczenia`.`lp`) as `liczba` 
 FROM `studenci`
 inner join `wypozyczenia`
 ON `wypozyczenia`.`pesel`=`studenci`.`pesel`
-where `wypozyczenia`.`pesel` like''
-group by `wypozyczenia`.`pesel`;
+where `wypozyczenia`.`pesel` like '$pes'
+group by `wypozyczenia`.`tytul`
+
+Zad 3.2
+SELECT count(`wypozyczenia`.`lp`) as `liczba` 
+FROM `studenci`
+inner join `wypozyczenia`
+ON `wypozyczenia`.`pesel`=`studenci`.`pesel`
+where `wypozyczenia`.`pesel` like '$pes'
+group by `studenci`.`pesel`

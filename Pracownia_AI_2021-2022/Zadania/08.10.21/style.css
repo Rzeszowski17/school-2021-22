@@ -14,6 +14,7 @@ body{
     height: 600px;
     background-color: #708090;
     padding: 20px;
+    box-sizing: border-box;
     text-align:left;
     float: left;
 } 
@@ -22,22 +23,23 @@ body{
     height: 600px;
     background-color: #708090;
     padding: 20px;
+    box-sizing: border-box;
     float: left;
     color: black;
 }
 #main{
     background-color: lightgray;
     padding: 20px;
+    box-sizing: border-box;
     color: black;
     float: left;
     width: 600px;
     height: 600px;
-
 }
 ul{
     list-style-position: inside;
 }
-#licz{
+#licz, #stud, #plec{
     text-align: left;
     width: 50%;
     margin: auto;
@@ -55,4 +57,9 @@ a{
 }
 h2{
     color: red;
+}
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
 }

@@ -50,7 +50,7 @@
         echo "<ul>";
 
         while($row = $result2 -> fetch_assoc()){
-            print("<li>$row[tytul]");
+            print("<li>$row[tytul]</li>");
         }
 
         echo "</ul>";
@@ -66,13 +66,23 @@
         }
 
         echo "<h4>Zadanie 3</h4>";
-        //$sql4="";
-       // $result4 = $connect -> query($sql4);
-        //while($row = $result -> fetch_assoc()){
+        $sql4="SELECT `imie`,`nazwisko` FROM `studenci`
+        left join `meldunek`
+        ON`studenci`.`pesel`=`meldunek`.`pesel`
+        where `meldunek`.`pesel` is null
+        ORDER BY `nazwisko`asc";
 
-        //}
-
-
+        $result4 = $connect->query($sql4);
+        echo"<div id='stud'>";
+        echo"<ul>";
+        while($row = $result4->fetch_assoc()){
+            print("
+            <li>$row[imie] $row[nazwisko]</li>
+            ");
+        }
+        echo"</ul>";
+        echo"</div>";
+        $connect->close();
         ?>
     </div>
     <div id="menu2">
