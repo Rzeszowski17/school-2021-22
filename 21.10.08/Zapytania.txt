@@ -1,0 +1,13 @@
+Zad 1.
+select `zadania`.`dataZadania`, `zadania`.`miesiac`, `zadania`.`wpis`
+from `zadania`
+where `zadania`.`miesiac` like "sierpien"
+
+Zad 2.
+select `zadania`.`miesiac`, `zadania`.`rok`
+from `zadania`
+where `zadania`.`dataZadania` like "2020-08-01"
+
+Zad 4.
+update `zadania` set `wpis`="Wycieczka:Karkonosze"
+where `zadania`.`dataZadania` like "2020-08-27"
