@@ -1,0 +1,49 @@
+Zad 1.1
+select `studenci`.`imie`, `studenci`.`nazwisko`,COUNT(`wypozyczenia`.`lp`) as `liczba`
+from `studenci`
+inner join `wypozyczenia`
+on `studenci`.`pesel`=`wypozyczenia`.`pesel`
+group by `studenci`.`pesel`
+ORDER by `liczba` desc
+limit 1;
+
+select `wypozyczenia`.`tytul`
+from `wypozyczenia`
+INNER JOIN `studenci`
+on `studenci`.`pesel`=`wypozyczenia`.`pesel`
+where `studenci`.`imie`="KRZYSZTOF" and `studenci`.`nazwisko`="LEWANDOWSKI";
+
+Zad 1.2
+create VIEW `zad2` as SELECT COUNT(`meldunek`.`pesel`) AS `Liczba`, `meldunek`.`id_pok` 
+FROM `studenci` 
+INNER JOIN `meldunek` 
+ON `studenci`.`pesel`=`meldunek`.`pesel`
+GROUP BY `meldunek`.`id_pok`
+
+SELECT avg(`Liczba`) FROM `zad2`
+
+Zad 1.3
+SELECT `imie`,`nazwisko` FROM `studenci`
+left join `meldunek`
+ON`studenci`.`pesel`=`meldunek`.`pesel`
+where `meldunek`.`pesel` is null
+ORDER BY `nazwisko`asc
+
+Zad 2.1
+SELECT case when right($pes,2)%2=0 THEN 'Kobieta' else 'Mężczyzna' end as `plec`
+from `studenci`
+GROUP by `plec`
+
+Zad 2.2
+SELECT COUNT(`studenci`.`imie`) as `liczba`,
+if(`studenci`.`imie` like '%a', 'Kobiet', 'Mężczyzn') as `plec`
+from `studenci`
+GROUP by `plec`
+
+Zad 3.1
+SELECT `tytul`,count(`wypozyczenia`.`lp`)as`liczba` 
+FROM `studenci`
+inner join `wypozyczenia`
+ON `wypozyczenia`.`pesel`=`studenci`.`pesel`
+where `wypozyczenia`.`pesel` like '$pes'
+group by `wypozyczenia`.`pesel`
