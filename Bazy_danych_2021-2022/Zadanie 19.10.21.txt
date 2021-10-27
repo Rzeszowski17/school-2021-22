@@ -1,0 +1,106 @@
+Kacper Rzeszowski 4B2T
+Zadanie 1.
+
+create table `zamowione`(
+    `ID` int PRIMARY key,
+    `SZTUK` int,
+    `TOWAR` varchar(150),
+    `DATA` date
+);
+
+create table `zrealizowane`(
+    `ID` int PRIMARY key,
+    `SZTUK` int,
+    `TOWAR` varchar(150),
+    `DATA` date
+);
+
+a)
+
+CREATE TRIGGER `Zamow` 
+BEFORE DELETE ON `zamowione` 
+FOR EACH ROW 
+BEGIN
+insert into `zrealizowane` (`ID`, `SZTUK`, `TOWAR`, `DATA` ) 
+values(OLD.ID, OLD.SZTUK, OLD.TOWAR, OLD.DATA); 
+END
+
+b) Trigger po wywołaniu wykonał sowje zadanie. 
+
+
+Zadanie 2.
+
+CREATE TABLE `staff`(
+    `ID` int PRIMARY KEY,
+    `NAZWISKO` varchar(150),
+    `PLACA` decimal(6,2)
+);
+
+a) 
+
+CREATE TRIGGER `Placa` 
+BEFORE INSERT ON `staff` 
+FOR EACH ROW 
+BEGIN 
+IF NEW.`PLACA` < 0 or NEW.`PLACA` > 3000 
+THEN SET NEW.`PLACA` = 0; 
+END IF; 
+END
+
+b) 
+
+CREATE TRIGGER `signal` 
+BEFORE INSERT ON `staff` 
+FOR EACH ROW 
+BEGIN 
+IF NEW.`PLACA` < 0 or NEW.`PLACA` > 3000 
+THEN 
+SIGNAL SQLSTATE '80000' 
+SET MESSAGE_TEXT='Placa cannot be less than 0 or more than 3000'; 
+END IF; 
+END
+
+Zadanie 3.
+
+create table `balance`( 
+    `id_b` int PRIMARY KEY auto_increment,
+    `CompanyName` varchar(100),
+    `Revenus` int,
+    `Costs` int,
+    `Income`int
+);
+
+
+CREATE TRIGGER `CountsIncome` 
+BEFORE INSERT ON `balance` 
+FOR EACH ROW 
+BEGIN 
+SET NEW.`Income` =(NEW.`Revenus`-NEW.`Costs`); 
+END
+
+Zadanie 4.
+
+create TABLE `Balance_log`(
+    `id_l` int PRIMARY key AUTO_INCREMENT,
+    `Date_` datetime,
+    `Message` varchar(100)
+);
+
+
+CREATE TRIGGER `InsertFIRMA` 
+AFTER INSERT ON `balance` 
+FOR EACH ROW 
+BEGIN 
+DECLARE TEKST varchar(100); 
+SET TEKST=("new data inserted for ", new.`CompanyName`); 
+insert into `balance_log` () VALUES (NULL, NOW(), TEKST); 
+END
+
+CREATE TRIGGER `UpdateFIRMA` 
+AFTER UPDATE ON `balance` 
+FOR EACH ROW 
+BEGIN 
+DECLARE TEKST varchar(100); 
+SET TEKST=(" data updated for ", new.`CompanyName`); 
+insert into `balance_log` () VALUES (NULL, NOW(), TEKST); 
+END

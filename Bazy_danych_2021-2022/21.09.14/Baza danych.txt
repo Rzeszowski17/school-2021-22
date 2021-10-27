@@ -1,0 +1,40 @@
+create database `sklep`;
+
+create table `towary`(
+ `idTowaru` int AUTO_INCREMENT PRIMARY KEY,
+  `Rodzaj` varchar(50),
+	`Producent` varchar(60),
+    `Model` varchar(50),
+    `Opis` varchar(150),
+    `Cena` double,
+    `IloscSztukWMagazynie` int,
+    `WartoscTowaru` double
+
+);
+
+create table `Klienci`(
+ `idKlienta` int AUTO_INCREMENT PRIMARY KEY,
+  `Nazwisko` varchar(50),
+	`Imie` varchar(40),
+    `Miasto` varchar(50),
+    `LiczbaOdwiedzinSklepu` int,
+    `DataRejestracji` date,
+    `LacznaKwotaZakupowa` double,
+    `Plec` enum("M","K")
+
+);
+
+load data INFILE
+"C:\\Users\\kacpe\\Desktop\\Bazy_danych_2021\\Towary.CSV"
+into table `towary`
+FIELDS TERMINATED by ";"
+lines TERMINATED by "\r\n"
+ignore 1 lines;
+
+
+load data INFILE
+"C:\\Users\\kacpe\\Desktop\\Bazy_danych_2021\\Klienci.CSV"
+into table `klienci`
+FIELDS TERMINATED by ";"
+lines TERMINATED by "\r\n"
+ignore 28 lines;

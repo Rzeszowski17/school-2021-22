@@ -1,0 +1,178 @@
+Zad 1.
+create database `KREDYTY_BD`
+
+Zad 2. 
+create table `klienci`(
+	`id_klienta` int PRIMARY KEY,
+    `imie` varchar(20) not null,
+    `nazwisko` varchar(20) not null,
+    `plec` enum("k","m"),
+    `wiek` int
+);
+
+create table `pozyczki`(
+	`id_pozyczki` int primary key,
+    `id_klienta` int,
+    `firma` varchar(20),
+    `kwota` INT,
+    `okres_splaty` int,
+    `oprocentowanie` decimal(4,2)
+
+);
+
+create table `firmy`(
+	`firma` varchar(20) PRIMARY KEY,
+    `kraj` varchar(20),
+    `segment` enum("M","D")
+);
+
+alter table `pozyczki` add FOREIGN KEY (`id_klienta`)
+REFERENCES `klienci` (`id_klienta`)
+
+alter table `pozyczki` add FOREIGN KEY (`firma`)
+REFERENCES `firmy` (`firma`)
+
+Zad 3.
+INSERT INTO `klienci` (`id_klienta`, `imie`, `nazwisko`, `plec`, `wiek`) VALUES
+('1', 'Marek', 'Kowalski', 'm', '24'),
+('2', 'Emil', 'Wierzbowski', 'm', '35'),
+('3', 'Alojzy', 'Boruch', 'm', '18'),
+('4', 'Lucjan', 'Minski', 'm', '60'),
+('5', 'Joanna', 'Bawol', 'k', '46'),
+('6', 'Adrianna', 'Musial', 'k', '19'),
+('7', 'Jerzy', 'Powabski', 'm', '55'),
+('8', 'Krzysztof', 'Nowak', 'm', '70'),
+('9', 'Monika', 'Lisicka', 'k', '46'),
+('10', 'Izydor', 'Kaplicki', 'm', '57'),
+('11', 'Julia', 'Wolska', 'k', '19'),
+('12', 'Julian', 'Wolski', 'm', '73'),
+('13', 'Magda', 'Rosicka', 'k', '64'),
+('14', 'Karol', 'Mol', 'm', '32'),
+('15', 'Irena', 'Krol', 'k', '29');
+
+INSERT INTO `firmy` (`firma`, `kraj`, `segment`) VALUES
+('Kredito', 'Polska', 'M'),
+('Provident', 'USA', 'D'),
+('Bociek', 'Polska', 'M'),
+('Esperatio', 'Francja', 'D'),
+('Ekretyd', 'Polska', 'M'),
+('Inkaso', 'Polska', 'D'),
+('Bogacki', 'Polska', 'M');
+
+INSERT INTO `pozyczki` (`id_pozyczki`, `id_klienta`, `firma`, `kwota`, `okres_splaty`, `oprocentowanie`) VALUES
+('1','1','Kredito','3000','12','5.5'),
+('2','1','Bociek','2000','6','6.5'),
+('3','2','Kredito','5000','5','3.5'),
+('4','3','Provident','7000','18','4.5'),
+('5','1','Kredito','1000','3','3.5'),
+('6','4','Ekretyd','2000','3','5.0'),
+('7','5','Provident','7000','12','5.0'),
+('8','7','Esperatio','5000','12','3.0'),
+('9','7','Esperatio','4000','6','4.5'),
+('10','6','Ekretyd','2500','6','3.0'),
+('11','8','Kredito','3500','10','3.0'),
+('12','9','Bogacki','1500','3','8.5'),
+('13','10','Provident','4500','12','4.5'),
+('14','11','Provident','500','2','10.0'),
+('15','11','Kredito','500','2','12.0'),
+('16','12','Bociek','2500','3','5.0'),
+('17','13','Bociek','1000','3','5.0'),
+('18','13','Inkaso','5500','6','7.0'),
+('19','14','Bogacki','2000','12','8.0'),
+('20','8','Bogacki','1000','3','9.0'),
+('21','9','Provident','1000','3','11.0'),
+('22','3','Provident','2500','6','10.0'),
+('23','2','Bociek','4000','6','12.0'),
+('24','7','Inkaso','1500','3','7.0'),
+('25','12','Esperatio','2500','5','6.0');
+
+Zad 5.
+
+1.
+select *
+from `klienci`
+where `klienci`.`wiek` BETWEEN 40 and 60
+ORDER BY `klienci`.`plec`
+
+2.
+select sum(`pozyczki`.`kwota`) as `Suma`, `pozyczki`.`firma`
+from `pozyczki`
+GROUP BY `pozyczki`.`firma`
+order by `Suma` desc
+
+3.
+select COUNT(`klienci`.`plec`) as `liczba`, `klienci`.`plec`
+from `klienci`
+INNER join `pozyczki`
+on `klienci`.`id_klienta`=`pozyczki`.`id_klienta`
+where `pozyczki`.`firma`="Provident"
+GROUP BY `klienci`.`plec`
+
+4.
+select sum(`pozyczki`.`kwota`) as `Suma`,
+`firmy`.`segment`
+from `pozyczki`
+INNER join `firmy`
+on `pozyczki`.`firma`=`firmy`.`firma`
+GROUP by `firmy`.`segment`
+
+5.
+SELECT `klienci`.`id_klienta`,`klienci`.`imie`,`klienci`.`nazwisko`, sum(`pozyczki`.`kwota`) as `Suma`
+from `klienci`
+INNER JOIN `pozyczki`
+ON `klienci`.`id_klienta`=`pozyczki`.`id_klienta`
+group by `klienci`.`id_klienta`
+order by `Suma` DESC
+LIMIT 1
+
+6.
+select `firmy`.`firma`, count(*) as `osoby`, `pozyczki`.`id_klienta`
+from `pozyczki`
+inner join `firmy`
+on `pozyczki`.`firma`=`firmy`.`firma`
+where `firmy`.`kraj` like "%Polska%"
+GROUP by `firmy`.`firma`
+
+7.
+SELECT `firmy`.`firma`, avg(`pozyczki`.`okres_splaty`) as `Średnia`
+from `firmy`
+inner join `pozyczki`
+on `firmy`.`firma`=`pozyczki`.`firma`
+GROUP by `firmy`.`firma`
+HAVING `Średnia`>6
+
+8.
+select `klienci`.`imie`,`klienci`.`nazwisko`,`pozyczki`.`okres_splaty`
+from `klienci`
+inner join `pozyczki`
+on `pozyczki`.`id_klienta`=`klienci`.`id_klienta`
+group by `klienci`.`id_klienta`
+having `pozyczki`.`okres_splaty`>avg(`pozyczki`.`okres_splaty`)
+
+9.
+select `firmy`.`kraj`, count(`pozyczki`.`id_pozyczki`)as`liczba pozyczek`, avg(`pozyczki`.`okres_splaty`)as`srednia splat`
+from `pozyczki`
+inner join `firmy`
+on `firmy`.`firma`=`pozyczki`.`firma`
+group by `firmy`.`kraj`
+
+10.
+select `klienci`.`imie`,`klienci`.`nazwisko`,sum(`pozyczki`.`kwota`)as`laczna kwota`,avg(`pozyczki`.`okres_splaty`)`srednia splata`
+from `pozyczki`
+inner join `klienci`
+on `pozyczki`.`id_klienta`=`klienci`.`id_klienta`
+group by `klienci`.`id_klienta`
+order by `laczna kwota` desc
+
+11.
+select `pozyczki`.`firma`,count(`pozyczki`.`id_pozyczki`)as`liczba`, avg(`pozyczki`.`oprocentowanie`)as`sredni %`
+from `pozyczki`
+group by `pozyczki`.`firma`
+having `pozyczki`.`oprocentowanie`>`sredni %
+
+12.
+select *
+from `klienci`
+left JOIN `pozyczki`
+ON `klienci`.`id_klienta` = `pozyczki`.`id_klienta`
+where `pozyczki`.`id_pozyczki` is null

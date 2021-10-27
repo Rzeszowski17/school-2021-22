@@ -1,0 +1,21 @@
+IdTowaru;Rodzaj;Producent;Model;Opis;Cena;IloscSztukWMagazynie;WartoscTowaru
+1;Tablet; Samsung;Galaxy Tab4;null;1249,00;1;1249,00
+2;Tablet;Samsung;Galaxy Note Pro;null;2399,00;1;2399,00
+3;Tablet;Sony;Xperia S;null;949,00;2;1898,00
+4;Tablet;Microsoft;Surface RT 32;null;1499,00;3;4497,00
+5;Tablet;Microsoft;Surface PRO;null;4299,00;0;0,00
+6;Aparat;Sony;DSC-W730;Badziewie!;337,50;2;675,00
+7;Aparat;Sony;DSC-W830;null;339,00;3;1017,00
+8;Aparat;Samsung;WB35F;null;389,00;4;1556,00
+9;Aparat;Canon;IXUS 150;£atwe rejestrowanie ostrych, szczegó³owych zdjêæ i filmów 16-megapikselowym aparatem IXUS z 8-krotnym zoomem optycznym i optyczn¹ stabilizacj¹ obrazu. Aparat jest elegancki i na tyle ma³y, aby zmieœciæ siê w kieszeni. ;329,00;2;658,00
+10;Konsola;Microsoft;Xbox One;Fajna do gierek;1699,00;2;3398,00
+11;Konsola;Microsoft;Xbox 360;Fajna do gierek;989,00;0;0,00
+12;Konsola;Sony;Playstation 4;Fajna do gierek;1399,00;2;2798,00
+13;Konsola;Sony;Playstation 3;Fajna do gierek;739,00;1;739,00
+14;Konsola;Nintendo;WiiU;Fajna do gierek;1199,00;1;1199,00
+15;Konsola;Nintendo;GameCube;Fajna do gierek;179,00;1;179,00
+16;Smartfon;Samsung;Galaxy S3;Znakomity telefon;512,00;3;1536,00
+17;Smartfon;Samsung;Galaxy S5;null;1880,00;2;3760,00
+18;Smartfon;Sony;Xperia Z1;null;1229,30;2;2458,60
+19;Smartfon;Sony;Xperia Z2;null;1399,00;2;2798,00
+20;Smartfon;Nokia;Lumia 530;null;320,50;5;1602,50
