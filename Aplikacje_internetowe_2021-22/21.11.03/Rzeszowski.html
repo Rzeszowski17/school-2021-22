@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>03.11.21</title>
+</head>
+<body>
+    <form>
+        Imie:<input type="text" id="name" placeholder="Imie">
+        <br>
+        Nazwisko:<input type="text" id="surname" placeholder="Nazwisko">
+        <br>
+        Adres zamieszkania:<input type="text" id="adress" placeholder="Adres zamieszkania">
+        <br>
+        Klasa:<input type="text" id="class" placeholder="Klasa">
+        <br>
+        <h4>Co wygenerować?</h4>
+        <input type="radio" name="XD" id="log">Login
+        <input type="radio" name="XD" id="pas">Hasło
+        <input type="radio" name="XD" id="ema">Email
+        <br>
+        <br>
+        <input type="button" id="but" value="Przeslij">
+        <input type="reset" value="Reset">
+        <p id="wyn1"></p>
+        <p id="wyn2"></p>
+    </form>
+    <script>
+        var butt=document.getElementById("but");
+        var scor1=document.getElementById("wyn1");
+        var scor2=document.getElementById("wyn2");
+
+        butt.onclick=function(){
+            var imi=document.getElementById("name").value;
+            var naz=document.getElementById("surname").value;
+            var adr=document.getElementById("adress").value;
+            var cla=document.getElementById("class").value;
+
+            var logi=document.getElementById("log");
+            var pas=document.getElementById("pas");
+            var emai=document.getElementById("ema");
+
+
+            var login=imi.charAt(0).toUpperCase()+imi.slice(1,3).toLowerCase()+"_"+naz.charAt(0).toUpperCase()+naz.slice(1,3).toLowerCase()+"_"+cla;
+            var pass=imi.charAt(imi.length-3).toUpperCase()+imi.slice(imi.length-2).toLowerCase()+"_"+naz.charAt(naz.lenghth-3).toUpperCase()+naz.slice(naz.length-2).toLowerCase();
+            var email=imi.toLowerCase()+naz.toLowerCase()+"@"+adr.toLowerCase()
+
+            scor1.innerHTML="<h4>Dane do logowania</h4>"
+
+            if(logi.checked==true){
+                var login=imi.charAt(0).toUpperCase()+imi.slice(1,3).toLowerCase()+"_"+naz.charAt(0).toUpperCase()+naz.slice(1,3).toLowerCase()+"_"+cla;
+                scor2.innerHTML="Login: "+login;
+            }
+
+            if(pas.checked==true){
+                var pass=imi.charAt(imi.length-3).toUpperCase()+imi.slice(imi.length-2).toLowerCase()+"_"+naz.charAt(naz.lenghth-3).toUpperCase()+naz.slice(naz.length-2).toLowerCase();
+                scor2.innerHTML="Hasło: "+pass;
+            }
+
+            if(emai.checked==true){
+                var email=imi.toLowerCase()+naz.toLowerCase()+"@"+adr.toLowerCase()
+                scor2.innerHTML="Email: "+email;
+            }
+        }
+    </script>
+</body>
+</html>

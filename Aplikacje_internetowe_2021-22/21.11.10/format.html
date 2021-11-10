@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Formatowanie</title>
+</head>
+<body>
+    <div id="baner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </div>
+    <div id="up1">
+        <h2>Przykład listy - hobby</h2>
+        <ul>
+            <li>muzyka</li>
+            <li>turystyka</li>
+            <ol>
+            <li>góry</li>
+            <li>jeziora</li>
+            <li>na rowerze</li>
+            </ol>
+            <li>książki</li>
+        </ul>
+    </div>
+    <div id="up2">
+        <h2>Przykład tabeli - rozkład dnia</h2>
+        <table>
+            <tr>
+            <th>Pora dnia</th>
+            <th> obowiązki</th>
+            </tr>
+            <tr>
+            <td>rano</td>
+            <td>nauka</td>
+            </tr>
+            <tr>
+            <td>południe</td>
+            <td>zajęcia dodatkowe</td>
+            </tr>
+            <tr>
+            <td>popołudnie</td>
+            <td rowspan="2">moje hobby</td>
+            </tr>
+            <tr>
+            <td>wieczór</td>
+            </tr>
+        </table>
+    </div>
+    <div id="up3">
+        <img src="./tekst.png" alt="technologia web">
+    </div>
+    <div id="main">
+        <p>Podaj rozmiar tekstu w procentach:
+        <input type="number" id="num">%
+        </p>
+        <p>
+        <select id="sel" name="xd">
+            <option value="normal">prosty</option>
+            <option value="italic">kursywa</option>
+        </select>
+        </p>
+        <p>
+        Jakim kolorem sformatować tekst? Wybierz przycisk
+        <br>
+        <input type="button" id="b1">
+        <input type="button" id="b2">
+        <input type="button" id="b3">
+        </p>
+        <p id="sco">
+        To jest przykład paragrafu, który może być dowolnie formatowany przez Java Scrip
+        </p>
+    </div>
+    <footer>
+    Formatowaniem tekstu zajmował się: <i>Kacper Rzeszowski</i>
+    <a href="formatowanie.pl" target="blank">Odwiedź także</a>
+    </footer>
+    <script>
+        var bu1=document.getElementById("b1");
+        var bu2=document.getElementById("b2");
+        var bu3=document.getElementById("b3");
+        var num=document.getElementById("num");
+        var sele=document.getElementById("sel");
+        var scor=document.getElementById("sco");
+
+
+        bu1.onclick=function(){
+
+            var sele=document.getElementById("sel");
+            scor.style.color="red";
+            scor.style.fontSize=num.value+"%";
+            scor.style.fontStyle=sele.value;
+        }
+
+        bu2.onclick=function(){
+            scor.style.color="green";
+            scor.style.fontSize=num.value+"%";
+            scor.style.fontStyle=sele.value;
+        }
+
+        bu3.onclick=function(){
+            scor.style.color="blue";
+            scor.style.fontSize=num.value+"%";
+            scor.style.fontStyle=sele.value;
+        }
+    </script>
+</body>
+</html>
