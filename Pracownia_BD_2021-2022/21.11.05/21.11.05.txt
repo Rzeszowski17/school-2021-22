@@ -1,0 +1,16 @@
+Zad 1.
+SELECT `zabiegi`.`dzial`
+from `zabiegi`
+GROUP by `zabiegi`.`dzial`;
+
+Zad 2.
+SELECT `klienci`.`imie`, `klienci`.`nazwisko`
+from `klienci`
+INNER JOIN `wizytydane`
+on `wizytydane`.`id_klienta`=`klienci`.`id_klienta`
+inner join `wizytyzabiegi`
+on `wizytydane`.`id_wizyty`=`wizytyzabiegi`.`id_wizyty`
+INNER join `zabiegi`
+on `wizytyzabiegi`.`kod_zabiegu`=`zabiegi`.`kod_zabiegu`
+where `zabiegi`.`dzial` like "MAKIJAZ";
+
