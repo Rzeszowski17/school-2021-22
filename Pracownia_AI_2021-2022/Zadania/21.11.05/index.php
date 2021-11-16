@@ -88,18 +88,23 @@
     }else{
         echo "Plik istnieje";
     }
-    $plik=fopen('wynik.txt','a+');
+    $plik=fopen('wynik.txt','w+');	
 
-    echo"<ul>";
-    while($row=$result4->fetch_assoc()){
-            $text="$row[Id_osoby], $row[Imie], $row[Nazwisko], $row[Pesel], $row[Data_ur], $row[Zawod]";
-            fwrite($plik,$text);
-            $tresc=feof($plik);
-            echo "<ol>$tresc</ol>";
-    }
-    echo"</ul>";
-    }
-    $connect->close();
-    ?>
-</body>
-</html>
+     while($row=$result4->fetch_assoc()){
+             $text="$row[Id_osoby], $row[Imie], $row[Nazwisko], $row[Pesel], $row[Data_ur], $row[Zawod]";
+             fwrite($plik,$text.PHP_EOL);
+             $tresc=feof($plik);
+           
+     } 
+     fclose($plik);
+      echo"<ol>";
+     $z_pliku=file('wynik.txt');
+     for($i=0;$i<count($z_pliku);$i++){
+     echo "<li>$z_pliku[$i]</li>";
+     }
+     echo"</ol>";
+     }
+     $connect->close();
+     ?>
+ </body>
+ </html>

@@ -1,1 +1,1 @@
-3, Annna, Lis, 09876543210, 2021-11-21, Informatyk2, Robert, Kwiatkowski, 43562187910, 2021-11-24, Stolarz3, Annna, Lis, 09876543210, 2021-11-21, Informatyk3, Annna, Lis, 09876543210, 2021-11-21, Informatyk3, Annna, Lis, 09876543210, 2021-11-21, Informatyk1, Jan, Kowalski, 12345678901, 2021-09-14, Stolarz2, Robert, Kwiatkowski, 43562187910, 2021-11-24, Stolarz3, Annna, Lis, 09876543210, 2021-11-21, Informatyk
+3, Annna, Lis, 09876543210, 2021-11-21, Informatyk
