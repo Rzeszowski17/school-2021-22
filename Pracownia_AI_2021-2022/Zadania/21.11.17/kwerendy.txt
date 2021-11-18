@@ -1,0 +1,19 @@
+Zad 1
+select `zawodnik`.`imie`, `zawodnik`.`nazwisko`
+from `zawodnik`
+WHERE `zawodnik`.`pozycja_id` = 4;
+
+Zad 2
+SELECT `liga`.`zespol`, `liga`.`punkty`, `liga`.`grupa`
+from `liga`
+order by `liga`.`punkty` desc;
+
+Zad 3
+SELECT `zawodnik`.`id`, `zawodnik`.`nazwisko`
+from `zawodnik`
+INNER join `pozycja`
+on `pozycja`.`id`=`zawodnik`.`pozycja_id`
+where `zawodnik`.`id` like 3 or `zawodnik`.`id` like 
+
+Zad 4
+TRUNCATE TABLE `rozgrywka`

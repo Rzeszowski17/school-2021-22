@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
+    Podaj powierzchnię
+    <input type="number" id="num" value="Powierzchnia do pomalowania">
+    <input type="button" id="but" value="Policz">
+    <p id="sco"></p>
+    <script>
+        var but=document.getElementById("but");
+
+        but.onclick=function(){
+            var num=document.getElementById("num");
+            var p=document.getElementById("sco");
+            
+            p.innerHTML="Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi:"+Math.ceil(num.value/4);
+        }
+    </script>
+</body>
+</html>
