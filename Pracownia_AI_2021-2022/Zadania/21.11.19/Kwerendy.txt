@@ -1,0 +1,14 @@
+Zad 1
+INSERT INTO `uzytkownicy`( `nick`, `zainteresowania`, `zawod`, `plec`) VALUES ('Anna','muzyka','informatyka','K');
+
+Zad 2
+INSERT INTO `konta`(`login`, `haslo`) VALUES ('AKowalska','qazwsx');
+
+Zad 3
+select `konta`.`login`, `konta`.`haslo`
+from `konta`;
+
+Zad 4
+SELECT `uzytkownicy`.`zainteresowania`
+from `uzytkownicy`
+where `uzytkownicy`.`id` = 1;
