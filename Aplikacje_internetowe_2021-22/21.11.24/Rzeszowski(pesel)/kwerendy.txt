@@ -1,0 +1,15 @@
+Zapytanie 1:
+SELECT `kadra`.`imie`, `kadra`.`nazwisko`
+from `kadra`
+where `kadra`.`stanowisko` like "fryzjerka";
+
+Zapytanie 2:
+SELECT COUNT(`uslugi`.`id`) as `liczba`
+from `uslugi`
+where `uslugi`.`nazwa` like "%fryzjerska%";
+
+Zapytanie 3:
+CREATE USER 'fryzjer'@`localhost` IDENTIFIED by 'Fryz12';
+
+Zapytanie 4:
+GRANT SELECT, CREATE, ALTER ON `egzamin2`.`kadra` TO 'fryzjer'@'localhost'
