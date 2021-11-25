@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Usługi kosmetyczne</title>
+</head>
+<body>
+    <div id="lewy1">
+        <h2>W ofercie</h2>
+        <ul>
+    <a href="twarz.html"><li>Zabieg na twarz</li></a>
+            <ol>
+            <li>Piling</li>
+            <li>Maska</li>
+            <li>Regulacja brwi</li>
+            </ol>
+            <li>Masaż</li>
+            <li>Diety</li>
+        </ul>
+    <a href="index.html">Do strony głównej</a>
+    </div>
+    <div id="prawy1">
+        <h1>Salon Kosmetyczny</h1>
+    </div>
+    <div id="prawy2">
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <input type="checkbox" id="id1" value="45">Piling<br>
+        <input type="checkbox" id="id2" value="30">Maska<br>
+        <input type="checkbox" id="id3" value="20">Masaż tawrzy<br>
+        <input type="checkbox" id="id4" value="5">Regulacja brwi<br>
+        <input type="button" id="butt" value="Sprawdź cenę">
+        <p id="wyn"></p>
+    </div>
+    <div id="lewy2">
+        <img src="./obraz1.png" alt="Kosmetyczka">
+    </div>
+    <footer>
+        <p>Auto: Rzeszowski (pesel)</p>
+    </footer>   
+</body>
+<script>
+    var but=document.getElementById("butt");
+    var scor=document.getElementById("wyn");
+
+    but.onclick=function(){
+        var chec1=document.getElementById("id1");
+        var chec2=document.getElementById("id2");
+        var chec3=document.getElementById("id3");
+        var chec4=document.getElementById("id4");
+
+        if(chec1.checked){
+            var x1=parseInt(chec1.value);
+        }else{
+            var x1=0
+        }
+
+        if(chec2.checked){
+            var x2=parseInt(chec2.value);
+        }else{
+            var x2=0
+        }
+
+        if(chec3.checked){
+            var x3=parseInt(chec3.value);
+        }else{
+            var x3=0
+        }
+
+        if(chec4.checked){
+            var x4=parseInt(chec4.value);
+        }else{
+            var x4=0
+        }
+
+        scor.innerHTML=x1+x2+x3+x4;
+    }
+</script>
+</html>
