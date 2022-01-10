@@ -1,0 +1,13 @@
+1.bry�y/geometria przestrzenna
+2.obliczanie kraw�dzi
+3.oblicznaie pola, obj�to�ci
+4.Zadania przyk�adowe, maturalne
+5.wszystkie rozaje bry�(wi�kszo��)
+6.Pomys� jak podzia� u matemaks.pl (https://www.matemaks.pl/geometria-przestrzenna.html)
+7.Logo przy title
+8.Folder do zdj��
+9. block= logo, st�pka, 
+10. jak najadę na kafelek to zmiena kolor
+11. kafelki
+12. podstrony 1 -> menu 2-> definicje 3->kalkulatro
+13. baner geometrai przestrzena, figury po obu stronach
