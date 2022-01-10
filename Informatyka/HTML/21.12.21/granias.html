@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Geometria przestrzenna</title>
+</head>
+<body>
+    <div id="baner">
+        <img src="./Graphics/baner1.png" id="banerle" alt="baner">
+        <span id="banertx">Geometria przestrzenna</span>
+        <img src="./Graphics/baner2.png" id="banerri" alt="baner">
+    </div>
+    <div id="lista">
+    <ul>
+        <li id="nagł">Graniastosłupy</li>
+        <ol>
+        <li id="lin1">Definicja graniastosłupu</li>
+        <li id="lin2">Prostopadłościan</li>
+        <li id="lin3">Sześcian</li>
+        <!-- Zadania proste?(jak starczy czasu) -->
+        </ol>
+    </ul>
+    <a href="index.html" id="pow">Powrót do głónej strony</a>
+    </div>
+    <div id="panel">
+    <h1 id="nazw">Definicja Graniastosłupy</h1>
+
+    <p class="tre" id="tre1"><b>Graniastosłup</b> to wielościan, którego dwie ściany, zwane podstawami, są przystającymi wielokątami zawartymi w płaszczyznach równoległych,
+    a pozostałe ściany, zwane ścianami bocznymi, są równoległobokami o wierzchołkach należących do podstawy.</p>
+    <img src="./Graphics/grania_1.png" id="grania1" alt="opisany">
+    <p class="tre" id="tre2">Dowolny odcinek, który łączy płaszczyzny zawierające podstawy graniastosłupa i jest do nich prostopadły, nazywamy <b>wysokością</b> graniastosłupa. <b>
+    Powierzchnię boczną</b> graniastosłupa stanowią jego ściany boczne.</p>
+
+    <p class="tre" id="tre3">Jeśli krawędzie boczne graniastosłupa są prostopadłe do podstawy, to graniastosłup nazywami <b>prostym</b>, natomiast w przeciwnym razie nazywamy <b>pochyłym</b>.</p>
+    <img src="./Graphics/grania_2.png" id="grania2" alt="prosty_pochyły">
+
+    <p class="tre" id="tre4">W zależności od tego, jakim wielokątem jest podstawa graniastosłupa, mówimy o graniastosłupie trójkątnym, czworokątnym, pięciokątnym itp.</p>
+    <img src="./Graphics/grania_3.png" id="grania3" alt="Graniastosłup-foremny">
+
+    <p class="tre" id="tre5">Graniastosłup <b>prawidłowy</b>lub inaczej zawny <b>foremny</b> to taki graniastosłup porsty, który każda z podstaw jest jakim kolwiek wielokątem foremnym.
+    <b>Wielokąt foremny</b> jest to wielokąt, którego wszystkie boki i kąty wewnętrzne są równe.</p>
+    </div>
+
+    <div id="kalku">
+    <h1>Kalkulator</h1>
+    <h3>Co chcesz poliszyć?</h3>
+    <select>
+        <option id="opti1" value=1>Pole powierzchni prostopadłościanu</option>
+        <option id="opti2" value=2>Objętość prostapodłościanu</option>
+        <option id="opti3" value=3>Przekątna prostopadłościanu</option>
+    </select>
+    <br>
+    <br>
+        <input type="button" id="but" value="Wprowadź dane">
+        <p id="zmien"></p>
+        <p id="scor"></p>
+    </div>
+<footer>
+    <span id="foottx">Autro strony: Kacper Rzeszowski</span>
+</footer>
+</body>
+<script>
+    var li1=document.getElementById("lin1");
+    var li2=document.getElementById("lin2");
+    var li3=document.getElementById("lin3");
+
+    li1.onclick=function(){
+        var naz=document.getElementById("nazw");
+        var tr1=document.getElementById("tre1");
+        var tr2=document.getElementById("tre2");
+        var tr3=document.getElementById("tre3");
+        var tr4=document.getElementById("tre4");
+        var tr5=document.getElementById("tre5");
+        var gra1=document.getElementById("grania1");
+        var gra2=document.getElementById("grania2");
+        var gra3=document.getElementById("grania3");
+        var kalk=document.getElementById("kalku");
+
+
+        naz.innerHTML="Definicja Graniastosłupy"
+        tr1.innerHTML="<b>Graniastosłup</b> to wielościan, którego dwie ściany, zwane podstawami, są przystającymi wielokątami zawartymi w płaszczyznach równoległych, a pozostałe ściany, zwane ścianami bocznymi, są równoległobokami o wierzchołkach należących do podstawy.";
+        tr2.innerHTML="Dowolny odcinek, który łączy płaszczyzny zawierające podstawy graniastosłupa i jest do nich prostopadły, nazywamy <b>wysokością</b> graniastosłupa. <b> Powierzchnię boczną</b> graniastosłupa stanowią jego ściany boczne.";
+        tr3.innerHTML="Jeśli krawędzie boczne graniastosłupa są prostopadłe do podstawy, to graniastosłup nazywami <b>prostym</b>, natomiast w przeciwnym razie nazywamy <b>pochyłym</b>.";
+        tr4.innerHTML="W zależności od tego, jakim wielokątem jest podstawa graniastosłupa, mówimy o graniastosłupie trójkątnym, czworokątnym, pięciokątnym itp.";
+        tr5.innerHTML="Graniastosłup <b>prawidłowy</b>lub inaczej zawny <b>foremny</b> to taki graniastosłup porsty, który każda z podstaw jest jakim kolwiek wielokątem foremnym.<b> Wielokąt foremny</b> jest to wielokąt, którego wszystkie boki i kąty wewnętrzne są równe.";
+
+        gra1.src="./Graphics/grania_1.png";
+        gra2.src="./Graphics/grania_2.png";
+        gra2.style.display="inline";
+        gra3.src="./Graphics/grania_3.png";
+        gra3.style.display="inline";
+        kalk.style.display="none";
+    }
+
+    li2.onclick=function(){
+        var naz=document.getElementById("nazw");
+        var tr1=document.getElementById("tre1");
+        var tr2=document.getElementById("tre2");
+        var tr3=document.getElementById("tre3");
+        var tr4=document.getElementById("tre4");
+        var tr5=document.getElementById("tre5");
+        var gra1=document.getElementById("grania1");
+        var gra2=document.getElementById("grania2");
+        var gra3=document.getElementById("grania3");
+        var kalk=document.getElementById("kalku");
+        var but=document.getElementById("but");
+        var opt1=document.getElementById("opti1");
+        var opt2=document.getElementById("opti2");
+        var opt3=document.getElementById("opti3");
+        var zmie=document.getElementById("zmien");
+
+        naz.innerHTML="Prostopadłościan"
+        tr1.innerHTML="<b>Prostopadłościan</b> to graniastosłup, posiadająca 2 podstawy oraz 4 ściany boczne, którego każda ściana i padstawa jest prostakątem, a dowolne dwie ściany są równoległę, albo prostopadłe."
+        tr2.innerHTML="Wzór na  pole powierzchni prostopadłościanu: <b>Pc=2ab+2ah+2bh</b> lub <b>2(ab+ah+bh)</b>"
+        tr3.innerHTML="Wzór na objętość prostopadłościanu: <b>V=abh</b>"
+        tr4.innerHTML="Wzór na długość przekątnej prostopadłościanu: <b>d=√a2+b2+h2</b>"
+        tr5.innerHTML="";
+
+        gra1.src="./Graphics/prosto_1.png";
+        gra2.style.display="none";
+        gra3.style.display="none";
+
+        kalk.style.display="inline";
+        
+        but.onclick=function(){
+            var opt1=document.getElementById("opti1");
+            var opt2=document.getElementById("opti2");
+            var opt3=document.getElementById("opti3");
+            var zmie=document.getElementById("zmien");
+
+            if(opt1==true){
+                zmie.innerHTML="coś";
+            }
+        }
+
+        }
+
+    li3.onclick=function(){
+        var naz=document.getElementById("nazw");
+        var tr1=document.getElementById("tre1");
+        var tr2=document.getElementById("tre2");
+        var tr3=document.getElementById("tre3");
+        var tr4=document.getElementById("tre4");
+        var tr5=document.getElementById("tre5");
+        var gra1=document.getElementById("grania1");
+        var gra2=document.getElementById("grania2");
+        var gra3=document.getElementById("grania3");
+        var kalk=document.getElementById("kalku");
+        var opt1=document.getElementById("opti1");
+        var opt2=document.getElementById("opti2");
+        var opt3=document.getElementById("opti3");
+
+        naz.innerHTML="Sześcian";
+        tr1.innerHTML="<b>Sześcian</b> jest szczególnym przypadkiem prostopadłościanu, w którym wszystkie ściany są w kształcie identycznych kwadratów.";
+        tr2.innerHTML="Wzór na pole powierzchni sześcianu: <b>Pc=6a2</b>";
+        tr3.innerHTML="Wzór na objętość sześcianu: <b>V=a3</b>";
+        tr4.innerHTML="Długość przekątnej sześcianu: <b>d=a√3</b>";
+
+        gra1.src="./Graphics/szesc_1.png";
+        gra2.style.display="none";
+        gra3.style.display="none";
+
+        kalk.style.display="inline";
+
+        
+    }
+</script>
+</html>
