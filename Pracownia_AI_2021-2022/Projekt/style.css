@@ -1,0 +1,176 @@
+body{
+    margin: 0%;
+    background-color: rgb(136, 245, 199);
+    }
+#baner{
+        text-align: center;
+        width: auto;
+        height: 20vh;
+        background-color: rgb(40, 224, 147);
+        box-sizing: border-box;
+    }
+#banerle{
+        float: left;
+        width: 25%;
+        height: 20vh;
+    }
+#banerri{
+        float: right;
+        width: 25%;
+        height: 20vh;
+    }
+#banertx{
+        font-size: 8vh;
+        font-style: italic;
+        position: absolute;
+        top: 5vh;
+        left: 25%;
+        width: 50%;
+        height: 15vh;
+        box-sizing: border-box;
+    }
+#main{
+        text-align: center;
+        margin: 15vh 0% 10vh 4%;
+    }
+.kafel{
+        width: 23%;
+        height: 30vh;
+        float: left;
+        padding: 2vh;
+        padding-top: 5vh;
+        border: 0.5vh solid black;
+        border-radius: 5%;
+    }
+#kafel1{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+.kafelim{
+        width: 70%;
+        height: auto;
+        margin-top: 5vh;
+    }
+.kafeltx{
+        text-align: center;
+        font-size: 4vh;
+        font-weight: bold
+    }
+.kafel:hover{
+        border: 0.5vh solid rgb(58, 114, 139);
+        color: rgb(40, 88, 110);
+    }
+footer{
+        clear: both;
+        text-align: left;
+        background-color: rgb(40, 224, 147);
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 100%;
+        height: 2.5vh;
+    }
+#foottx{
+        font-size: 1.7vh;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0.2vh;
+    }
+a{
+        color: black;
+        text-decoration: none;
+    }
+a:visited{
+        color:black;
+    }
+#lista{
+        width: auto;
+        height: 5vh;
+        background-color: rgb(27, 189, 121);
+}
+td{
+        border: black 1px solid;
+        border-radius: 3px;
+        font-size: 25px;
+}
+td:hover{
+    border: black 2px solid;
+    background-color: rgb(12, 172, 105);
+}
+#main_log{
+    font-size:  23px;
+    text-align: center;
+    width: 48vh;
+    height: 23vh;
+    margin: 10vh auto auto auto;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+}
+table{
+    margin: auto;
+}
+input[type=text]{
+    width: 65%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=text]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+input[type=password]{
+    width: 65%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=password]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+#log_but{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    background-color: rgb(64, 170, 219);
+    border: 3px rgb(31, 74, 94) solid;
+    border-radius: 20px;
+    margin-bottom: 1.5vh;
+}
+#log_but:hover{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    color: white;
+    background-color: rgb(28, 113, 153);
+    border: 3px rgb(14, 48, 63) solid;
+    border-radius: 20px;
+}
+#stwo1{
+    padding-top: 15px;
+}
+#stwo2:hover{
+        text-decoration: underline;
+        color: rgb(58, 114, 139);
+        font-weight: bold;
+}
+#main_rej{
+    font-size:  23px;
+    text-align: center;
+    width: 48vh;
+    height: 75vh;
+    margin: 2vh auto auto auto;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+}

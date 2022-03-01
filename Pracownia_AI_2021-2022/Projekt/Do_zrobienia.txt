@@ -1,0 +1,4 @@
+1. do logowanie i rejestraci zrobić kafelki 
+2. udekorować link do rejestracji
+3. radi wybór 
+4. usunąć b+e, zostawić a, wszystkie z e, t
