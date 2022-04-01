@@ -1,0 +1,4 @@
+1. lista przy domku za duży margin
+2. #dane_adm -> style_profil -> overflow-y: hidden; nie działa 
+3. pomoc z scryptem z aktualne i histroii z id użytkownika
+4. kwota 
