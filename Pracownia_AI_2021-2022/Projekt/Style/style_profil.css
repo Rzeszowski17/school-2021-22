@@ -1,0 +1,126 @@
+table{
+    text-align: center;
+    margin: 3vh 2vh auto 2vh;
+}
+td{
+    width: 500vh;
+}
+#dane{
+    font-size:  23px;
+    text-align: center;
+    width: 49vh;
+    height: 45vh;
+    margin: 8vh auto 10vh auto;
+    padding: 10vh auto 10vh auto;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+}
+input[type=text], input[type=date],  input[type=email], input[type=password], input[type=number], select{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=date]{
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=date]:focus,  input[type=email]:focus, input[type=number]:focus, select:focus{
+    border: 4px rgb(58, 114, 139) solid;
+    transition: 0.5s;
+}
+input[type=button], input[type=submit]{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    background-color: rgb(64, 170, 219);
+    border: 3px rgb(31, 74, 94) solid;
+    border-radius: 20px;
+    margin-bottom: 1.5vh;
+}
+input[type=button]:hover, input[type=submit]:hover{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    color: white;
+    background-color: rgb(28, 113, 153);
+    border: 3px rgb(14, 48, 63) solid;
+    border-radius: 20px;
+}
+.zakladki p{
+    padding-top: 15px;
+}
+.zakla{
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(27, 189, 121);
+    border: 2px black solid;
+    border-radius: 6px;
+    font-size: 20px;
+}
+.zakla:hover{
+    background-color: rgb(34, 138, 94);
+}
+#dane_adm{
+    font-size:  23px;
+    text-align: center;
+    width: 49vh;
+    height: 65vh;
+    margin: 4vh auto auto auto;
+    padding: 10vh auto 10vh auto;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+    overflow-y: hidden;
+}
+#dane_adm_dele{
+    font-size:  23px;
+    text-align: center;
+    width: 90vh;
+    height: auto;
+    margin: 8vh auto 10vh auto;
+    padding: 10vh auto 10vh auto;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+    overflow-y: hidden;
+}
+#dane_grant{
+    font-size:  18px;
+    text-align: center;
+    width: 100vh;
+    height: auto;
+    margin: 8vh auto 10vh auto;
+    padding: 10vh auto 10vh auto;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+    overflow-y: hidden;
+}
+#main_comm{
+    font-size:  18px;
+    text-align: center;
+    width: 50vh;
+    height: auto;
+    margin: 8vh auto 10vh auto;
+    padding: 10vh auto 10vh auto;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+    overflow-y: hidden;
+}
+#tab_comm{
+    width: 350px;
+    margin: auto;
+}
+th, td{
+    padding: 5px 8px 5px 8px;
+    margin: auto 5px auto 5px;
+    text-align: center;
+}

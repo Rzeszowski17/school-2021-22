@@ -1,0 +1,70 @@
+#main_l{
+    height: 80.5vh;
+    overflow-y: hidden;
+}
+#main_log{
+    font-size:  23px;
+    text-align: center;
+    width: 48vh;
+    height: 30vh;
+    margin: 10vh auto 10vh auto;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+}
+input[type=text]{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=text]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+input[type=password]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=password]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+#log_but{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    background-color: rgb(64, 170, 219);
+    border: 3px rgb(31, 74, 94) solid;
+    border-radius: 20px;
+    margin-bottom: 1.5vh;
+}
+#log_but:hover{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    color: white;
+    background-color: rgb(28, 113, 153);
+    border: 3px rgb(14, 48, 63) solid;
+    border-radius: 20px;
+}
+#stwo1{
+    padding-top: 15px;
+}
+#stwo2:hover{
+        text-decoration: underline;
+        color: rgb(58, 114, 139);
+        font-weight: bold;
+}
+td{
+    text-align: left;
+}

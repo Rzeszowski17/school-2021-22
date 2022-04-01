@@ -1,0 +1,104 @@
+input{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+#oferta{
+        margin: 0%;
+        height: auto;
+        background-color: rgb(136, 245, 199);
+}
+table{
+    text-align: center;
+}
+th{
+    padding-bottom: 10px;
+}
+#rezerwacja{
+    border: 5px dashed #006400;
+    padding: 20px;
+    width: 420px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 100px auto auto auto;
+    background-color: lightgray;
+}
+.pojazd{
+    height: 37vh;
+    width: 35%;    
+    border: dashed #006400 5px;
+    border-radius: 10px;
+    padding: 10px 5px 0 5px;
+    margin-top: 20px;
+    font-size: 2vh;
+    background-color: #00FA9A;
+}
+.pojazd1{
+    margin-left: 80px;
+    float: left;
+}
+.pojazd2{
+    margin-right: 80px;
+    float: right;
+}
+.pojazd input{
+    margin-top:1vh;
+    width: 55%;
+    
+}
+.pojazd input:hover{
+    background-color: #66CDAA;
+    border: 3px solid black;
+    color: black;
+    transition: 50ms;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.pojazd img{
+    margin: auto;
+    height: 15vh;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.dane{
+    margin: 2px;
+    margin-bottom: 0px;
+    height: 81%;
+    width: 100%;
+}
+.danep{
+    margin: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    margin-bottom: 10px;
+}
+.opis{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 2vh;
+    margin-bottom: 5px;
+
+}
+.cena{
+    margin: 0;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5vh;
+
+}
+.przycisk{
+    height: 19%;
+}
+.przycisk input{
+    height: 4vh;
+    width: 30vh;
+    font-size: 2vh;
+    margin-bottom: 5px;
+ }
+
+

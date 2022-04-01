@@ -1,0 +1,63 @@
+#main_r{
+    height: 78.9vh;
+    overflow-y: scroll;
+}
+#main_rej{
+    font-size:  23px;
+    text-align: center;
+    width: 65vh;
+    height: 82vh;
+    margin: 3vh auto 3vh auto;
+    padding: 3vh 5vh 3vh 5vh;
+    border: 4px rgb(40, 97, 124) dashed;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+input[type=text]{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=text]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+input[type=password]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px #ccc solid;
+    border-radius: 20px;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=password]:focus{
+    border: 4px rgb(58, 114, 139) solid;
+}
+#rej_but{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    background-color: rgb(64, 170, 219);
+    border: 3px rgb(31, 74, 94) solid;
+    border-radius: 20px;
+    margin-bottom: 1.5vh;
+}
+#rej_but:hover{
+    width: 35%;
+    height: 36px;
+    padding: auto;
+    color: white;
+    background-color: rgb(28, 113, 153);
+    border: 3px rgb(14, 48, 63) solid;
+    border-radius: 20px;
+}
+.td_rej{
+    text-align: left;
+    padding-left: 60px;
+}

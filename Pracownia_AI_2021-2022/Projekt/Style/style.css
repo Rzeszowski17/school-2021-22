@@ -1,0 +1,164 @@
+body{
+    margin: 0%;
+    background-color: rgb(136, 245, 199);
+    font-family:'Segoe UI';
+    width: auto;
+    }
+#baner{
+        text-align: center;
+        width: auto;
+        height: 12.5vh;
+        background-color: rgb(40, 224, 147);
+        box-sizing: border-box;
+    }
+#banertx{
+        font-size: 8vh;
+        font-style: italic;
+        position: absolute;
+        top: 1.5vh;
+        left: 25%;
+        width: 50%;
+        height: 10vh;
+        box-sizing: border-box;
+    }
+.baner_bott{
+    border-bottom: 2px black solid;
+}
+#main_inde{
+        text-align: center;
+        height: 59.9vh;
+        margin: 15vh 2% 10vh 4%;
+    }
+#main_reszt{
+        text-align: center;
+        height: 78.9vh;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding-top: 15px;
+    }
+.kafel{
+        width: 23%;
+        height: 30vh;
+        float: left;
+        padding: 2vh;
+        padding-top: 5vh;
+        border: 0.5vh solid black;
+        border-radius: 5%;
+    }
+#kafel1{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+.kafelim{
+        width: 70%;
+        height: auto;
+        margin-top: 5vh;
+    }
+.kafeltx{
+        text-align: center;
+        font-size: 4vh;
+        font-weight: bold
+    }
+.kafel:hover{
+        border: 0.5vh solid rgb(58, 114, 139);
+        color: rgb(40, 88, 110);
+    }
+footer{
+        clear: both;
+        background-color: rgb(40, 224, 147);
+        width: 100%;
+        height: auto;
+        width: 100%;
+        border-top: 1px solid black;
+    }
+#foottx1{
+        text-align: center;
+        font-size: 1.7vh;
+        font-weight: bold;
+        color: rgba(97, 107, 107, 0.692);
+        clear: both;
+    }
+#foottx2{
+        float: right;
+        font-size: 1.7vh;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-right: 80px;
+}
+#foottx3{
+    float: left;
+    font-size: 1.7vh;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+a{
+        color: black;
+        text-decoration: none;
+    }
+a:visited{
+        color:black;
+    }
+a:hover{
+    color: white;
+    transition: 0.5s;
+}
+#lista{
+        width: auto;
+        height: 5.5vh;
+        background-color: rgb(27, 189, 121);
+        border-bottom: black 2px solid;
+        border-top: black 2px solid;
+        padding: auto;
+}
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+}
+ul{
+	position: absolute;
+}
+ul li {
+	float: left;
+    border: black 1px solid;
+    border-radius: 3px;
+    width: 37vh;
+    text-transform: uppercase;
+    margin: 2px 2px 2px 2px;
+    height: 4.5vh;
+    line-height: 4.5vh;
+}
+li:hover{
+    background-color: rgb(34, 138, 94);
+    transition: 0.5s;
+    color: white;
+}
+a:hover{
+    color: white;
+}
+ul a {
+	text-decoration: none;
+	display: block;
+    width: 38vh;
+	text-align: center;
+	font-weight: bold;
+	color: black;  
+    height: 4.5vh;
+}
+#us_visi{
+    background-color: rgb(34, 138, 94);
+    color:white;
+    width: 37vh;
+}
+#glow{
+    width: 5vh;
+}
+
+
+
+
+
+
+

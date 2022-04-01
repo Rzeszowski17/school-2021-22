@@ -1,0 +1,136 @@
+#main{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 80vh;
+}
+#baner{
+    border-bottom: 3px solid black;
+}
+body{
+    margin-top: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+#oferta{
+        margin: 0%;
+        height: auto;
+        background-color: rgb(136, 245, 199);
+}
+
+table{
+    text-align: center;
+}
+footer{
+        clear: both;
+        text-align: left;
+        background-color: rgb(40, 224, 147);
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 100%;
+        height: 2.5vh;
+        border-top: 1px solid black;
+}
+th{
+    padding-bottom: 10px;
+}
+#rezerwacja{
+    border: 5px dashed #006400;
+    padding: 20px;
+    width: 420px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    background-color: lightgray;
+    margin-top: 20px;
+}
+.pojazd{
+    height: 38vh;
+    width: 35%;    
+    border: dashed #006400 5px;
+    border-radius: 10px;
+    padding: 10px 5px 0 5px;
+    margin-top: 20px;
+    font-size: 2vh;
+    background-color: #00FA9A;
+}
+.pojazd1{
+    margin-left: 80px;
+    float: left;
+}
+.pojazd2{
+    margin-right: 80px;
+    float: right;
+}
+.pojazd input{
+    margin-top:1vh;
+    width: 55%;
+    
+}
+.pojazd input:hover{
+    background-color: #66CDAA;
+    border: 3px solid black;
+    color: black;
+    transition: 50ms;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.pojazd img{
+    margin: auto;
+    height: 15vh;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.dane{
+    margin: 2px;
+    margin-bottom: 0px;
+    height: 81%;
+    width: 100%;
+}
+.danep{
+    margin: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    margin-bottom: 10px;
+}
+.opis{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.8vh;
+    margin-bottom: 5px;
+
+}
+.cena{
+    margin: 0;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5vh;
+
+}
+.przycisk{
+    height: 19%;
+    margin-top: 5px;
+}
+.przycisk input{
+    height: 3vh;
+    width: 25vh;
+    font-size: 2vh;
+    margin-bottom: 5px;
+ }
+
+
