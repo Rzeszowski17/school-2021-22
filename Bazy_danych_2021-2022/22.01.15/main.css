@@ -1,0 +1,101 @@
+
+.baner1
+{
+	background-color: crimson;
+	color :White;
+	text-align:center;
+	height:100px;
+	width: 80%;
+	float:left;
+
+}
+
+.baner2
+{
+	background-color: crimson;
+	text-align:center;
+	height:100px;
+	width:20%;
+	float: right;
+}
+
+
+
+
+.lewy1
+{
+	background-color: darkblue;
+	color : silver;
+	text-align:left;
+	height:500px;
+	width:40%;	
+	float:left;
+}
+
+.prawy1
+{
+	background-image: linear-gradient(lightgreen, green, forestgreen, darkgreen);
+	color :white;
+	text-align:canter;
+	height:500px;
+	width:60%;
+	float:right;
+}
+
+
+
+.stopka{
+	background-color: DarkOliveGreen;
+	color :Orange;
+	padding:10px;
+	text-align:center;
+	clear:both;
+}
+
+.odnosnik{
+	display:inline-block;
+	width:3em;
+	font-size:1em;
+	height:30px;
+	border:1px solid white;
+	background-color:DarkRed;
+	margin-top:30px;
+}
+
+
+.odnosnik > a
+{
+	color:White;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.odnosnik:hover{
+	background-color:white;
+}
+
+#img1{
+	
+	display:inline-block;
+	width:100px;
+	height:100px;
+	
+}
+
+form > label {
+	display:inline-block;
+	width:6em;	
+	color: silver;
+	padding-left:2em;
+	text-align:left;
+}
+
+input[type=text]
+{
+	width:2em;
+}
+
+
+
+
+
